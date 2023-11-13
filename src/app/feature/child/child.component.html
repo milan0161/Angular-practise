@@ -1,5 +1,6 @@
 <ul>
     <li *ngFor="let item of items">
         <p>{{item}}</p>
+        <button class="btn btn-danger" (click)="selectItem(item)">Remove Item</button>
     </li>
 </ul>

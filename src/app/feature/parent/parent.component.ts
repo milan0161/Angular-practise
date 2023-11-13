@@ -19,4 +19,11 @@ export class ParentComponent {
 
     itemForm.reset();
   }
+
+  removeItem(item: Item) {
+    const index = this.items.indexOf(item);
+    this.items.splice(index, 1);
+    // const filteredItems = [...this.items].filter((x) => x !== item);
+    // this.items = filteredItems;
+  }
 }
