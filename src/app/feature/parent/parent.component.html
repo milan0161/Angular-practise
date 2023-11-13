@@ -1,0 +1,17 @@
+<div class="container">
+  <form #itemForm="ngForm" (ngSubmit)="addItem(itemForm)">
+    <h1>Add new item</h1>
+    <input
+      required
+      minlength="2"
+      #itemInput="ngModel"
+      type="text"
+      class="form-control"
+      name="item"
+      ngModel
+    />
+    <p class="text-danger" *ngIf="itemInput.errors?.['minlength']" >Input text is too short</p>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+<app-child [items]="items"></app-child>
