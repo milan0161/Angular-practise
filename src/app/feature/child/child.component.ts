@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Item } from '../types/index.types';
 
 @Component({
   selector: 'app-child',
@@ -7,13 +6,11 @@ import { Item } from '../types/index.types';
   styleUrls: ['./child.component.css'],
 })
 export class ChildComponent {
-  @Input() items: Item[] = [];
+  @Input() items: string[] = [];
 
-  @Output() selectedItem = new EventEmitter<Item>();
+  @Output() selectedItem = new EventEmitter<string>();
 
-  constructor() {}
-
-  selectItem(item: Item) {
+  selectItem(item: string) {
     this.selectedItem.emit(item);
   }
 }
