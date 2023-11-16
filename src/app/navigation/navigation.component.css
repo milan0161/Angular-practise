@@ -1,0 +1,25 @@
+nav {
+    border-bottom: 1px solid rgb(161, 157, 157);
+    height: 70px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+nav ul li {
+    font-size: 20px;
+    font-weight: bold;
+}
+nav ul li a {
+    text-decoration: none;
+    color: rgb(114, 106, 106);
+    transition-duration: 400ms;
+}
+nav ul li a:hover{
+    color: blue;
+}

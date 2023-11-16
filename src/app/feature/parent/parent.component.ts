@@ -7,7 +7,6 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./parent.component.css'],
 })
 export class ParentComponent {
-  //Nemoj da pravis sinonime bez dodane funkcije!
   items: string[] = ['Learn Angular', 'Become better than you were yesterday'];
 
   addItem(itemForm: NgForm) {
@@ -23,6 +22,5 @@ export class ParentComponent {
   removeItem(item: string) {
     const index = this.items.indexOf(item);
     this.items.splice(index, 1);
-    // Ne ostavlja se komentarisan kod!
   }
 }
