@@ -1,5 +1,10 @@
 <nav>
-    <ul >
-        <li *ngFor="let item of items"><a [routerLink]="item.path">{{item.displayName}}</a></li>
+    <ul>
+        <li *ngFor="let item of items; index as i">
+            <div *ngIf="i === 0">
+                <a routerLink="/">Home</a>
+            </div>
+            <a [routerLink]="'/' +item.path">{{item.path}}</a> 
+        </li>
     </ul>
 </nav>

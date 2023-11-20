@@ -2,3 +2,7 @@ section {
     background: #daacac;
     height: 100svh;
 }
+
+section h2 {
+    text-align: center;
+}
