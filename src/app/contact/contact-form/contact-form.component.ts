@@ -55,7 +55,7 @@ export class ContactFormComponent {
     }
     console.log(this.contactForm.value)
     console.log(this.contactForm.invalid)
+    this.contactForm.reset()
+    this.closeModal()
   }
-
- 
 }
