@@ -5,6 +5,17 @@ import { Component } from '@angular/core';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent {
+export class ContactComponent{
 
+  isOpen:boolean = false
+
+  sendContactInfo(){
+    this.isOpen = true
+
+  }
+  
+  closeModal(opt: boolean){
+    this.isOpen = opt;
+    console.log(this.isOpen)
+  }
 }

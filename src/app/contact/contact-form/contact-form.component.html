@@ -1,0 +1,32 @@
+<form [formGroup]="contactForm" (ngSubmit)="sendEmail()" class="col-4 m-auto contact_form">
+    <h3 class="text-center">Contact Form</h3>
+    <div class="mb-3 form-group">
+        <label for="firstname">First Name:</label>
+        <input class="form-control" type="text" name="firstname" formControlName="firstname">
+    </div>
+    <div class="mb-3">
+        <label for="lastname">Last Name:</label>
+        <input class="form-control" type="text" name="lastname" formControlName="lastname">
+    </div>
+    <div class="mb-3">
+        <label for="email">Email:</label>
+        <input class="form-control" type="email" name="email" formControlName="email">
+    </div>
+    <div class="mb-3">
+        <label for="phone_number">Phone Number:</label>
+        <input class="form-control" type="string" name="phone_number" formControlName="phone_number">
+
+    </div>
+    <div class="mb-3">
+        <label for="message">Message:</label>
+        <textarea class="form-control" name="message" id="message" cols="30" rows="10" formControlName="message"></textarea>
+
+
+    </div>
+    <div class="submit_div">
+        <button  type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-secondary" (click)="closeModal()">Cancel</button>
+    </div>
+</form>
+
+<div class="backdrop"></div>

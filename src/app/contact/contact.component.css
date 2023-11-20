@@ -1,8 +1,6 @@
-section {
-    height: 100svh;
-    background: #82a0b8;
-}
-section h2 {
-    color: #fff;
-    text-align: center;
+.contact_div button{
+    border: none;
+    background: transparent;
+    text-decoration: underline;
+    cursor: pointer;
 }
