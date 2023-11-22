@@ -1,6 +1,15 @@
-.contact_div button{
-    border: none;
-    background: transparent;
-    text-decoration: underline;
-    cursor: pointer;
+.contact_div button {
+  border: none;
+  background: transparent;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.contact_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.contact_div h2 {
+  margin-top: 10px;
 }

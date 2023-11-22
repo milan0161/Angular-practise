@@ -1,32 +1,81 @@
-<form [formGroup]="contactForm" (ngSubmit)="sendEmail()" class="col-4 m-auto contact_form">
-    <h3 class="text-center">Contact Form</h3>
-    <div class="mb-3 form-group">
-        <label for="firstname">First Name:</label>
-        <input class="form-control" type="text" name="firstname" formControlName="firstname">
+<form
+  [formGroup]="contactForm"
+  (ngSubmit)="sendEmail()"
+  class="col-4 m-auto contact_form"
+>
+  <h3 class="text-center">Send Message</h3>
+  <div class="mb-3 form-group">
+    <label for="firstname">First Name:</label>
+    <input
+      class="form-control"
+      type="text"
+      formControlName="firstname"
+      [class.is-invalid]="checkErrors('firstname')"
+    />
+    <div class="text-danger" *ngIf="checkErrors('firstname')">
+      Firstname is required, it must be at least 2 characters long, only letters
+      are allowed.
     </div>
-    <div class="mb-3">
-        <label for="lastname">Last Name:</label>
-        <input class="form-control" type="text" name="lastname" formControlName="lastname">
+  </div>
+  <div class="mb-3">
+    <label for="lastname">Last Name:</label>
+    <input
+      class="form-control"
+      type="text"
+      formControlName="lastname"
+      [class.is-invalid]="checkErrors('lastname')"
+    />
+    <div class="text-danger" *ngIf="checkErrors('lastname')">
+      Lastname is required, it must be at least 2 characters long, only letters
+      are allowed.
     </div>
-    <div class="mb-3">
-        <label for="email">Email:</label>
-        <input class="form-control" type="email" name="email" formControlName="email">
+  </div>
+  <div class="mb-3">
+    <label for="email">Email:</label>
+    <input
+      class="form-control"
+      type="email"
+      formControlName="email"
+      [class.is-invalid]="checkErrors('email')"
+    />
+    <div class="text-danger" *ngIf="checkErrors('email')">
+      Email address is invalid
     </div>
-    <div class="mb-3">
-        <label for="phone_number">Phone Number:</label>
-        <input class="form-control" type="string" name="phone_number" formControlName="phone_number">
-
+  </div>
+  <div class="mb-3">
+    <label for="phone_number">Phone Number:</label>
+    <input
+      class="form-control"
+      type="string"
+      formControlName="phone_number"
+      [class.is-invalid]="checkErrors('phone_number')"
+    />
+    <div class="text-danger" *ngIf="checkErrors('phone_number')">
+      Phone number is invalid, only plus operator and numbers are allowed. Must
+      be at least 6 numbers long.
     </div>
-    <div class="mb-3">
-        <label for="message">Message:</label>
-        <textarea class="form-control" name="message" id="message" cols="30" rows="10" formControlName="message"></textarea>
-
-
+  </div>
+  <div class="mb-3">
+    <label for="message">Message:</label>
+    <textarea
+      class="form-control"
+      id="message"
+      cols="30"
+      rows="10"
+      formControlName="message"
+      [class.is-invalid]="checkErrors('message')"
+    ></textarea>
+    <div class="text-danger" *ngIf="checkErrors('message')">
+      Message is required, must be at least 10 characters and less then 255
+      characters long.
     </div>
-    <div class="submit_div">
-        <button  type="submit" class="btn btn-primary">Submit</button>
-        <button type="button" class="btn btn-secondary" (click)="closeModal()">Cancel</button>
-    </div>
+  </div>
+  <div class="submit_div">
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" class="btn btn-secondary" (click)="closeModal()">
+      Cancel
+    </button>
+  </div>
 </form>
 
 <div class="backdrop"></div>

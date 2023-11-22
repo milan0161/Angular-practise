@@ -1,30 +1,35 @@
-.submit_div{
-    display: flex;
-    justify-content: center;
-    gap: 2px;
+.submit_div {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
 }
 .submit_div button {
-    width: 100%;
+  width: 100%;
 }
 .backdrop {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0 , 0, 0, 0.4);
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
 }
 .contact_form {
-    background: #fff;
-    z-index: 3;
-    position: absolute;
-    border: 1px solid rgb(199, 195, 195);
-    padding: 20px;
-    border-radius: 5px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  background: #fff;
+  z-index: 3;
+  position: absolute;
+  border: 1px solid rgb(199, 195, 195);
+  padding: 20px;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+/* .ng-invalid {
+  background: rgb(226, 95, 95);
+  border: 2px solid red;
+} */

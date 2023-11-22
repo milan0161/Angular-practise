@@ -1,11 +1,16 @@
 <section>
-    <div class="contact_div">
-        <p>Send us a message and your contact information, and we will contact you as soon as possible</p>
-        <div>
-            Click <button (click)="sendContactInfo()">here</button> to fill out the form
-        </div>
+  <div class="contact_div">
+    <h2>Contact Us</h2>
+    <p>
+      Send us a message and your contact information, and we will contact you as
+      soon as possible
+    </p>
+    <div>
+      Click <button (click)="sendContactInfo()">here</button> to fill out the
+      form
     </div>
-    <ng-template [ngIf]="isOpen">
-        <app-contact-form (opened)="closeModal($event)"></app-contact-form>
-    </ng-template>
+  </div>
+  <ng-template [ngIf]="isOpen">
+    <app-contact-form (opened)="closeModal($event)"></app-contact-form>
+  </ng-template>
 </section>
